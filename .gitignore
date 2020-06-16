@@ -1,0 +1,12 @@
+# User Custom - Not Git
+*.csv
+*.tmp
+*-tmp
+tmp-*
+*-tmp-*
+*.log
+/gitignore/
+
+# Ignore Microsoft Office temporary files
+~$*.xls*
+~$*.ppt*
