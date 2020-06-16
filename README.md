@@ -50,7 +50,16 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
 
 * *Overview*: Transform your Jira with the complete Automation, Customisation and Extension solution
 * *Features*: 
-  * 
+  * Create powerful workflows
+  * Define custom automations
+  * Extend your Jira with Enhanced Search and JQL Functions
+  * Run on a schedule
+  * Run after an event
+  * Execution History
+  * Audit Log
+  * Script Console
+  * Integrations
+  * Library
 
 * [Instaling Script Runner for Jira](./doc/install-script-runner-for-jira-cloud.md)
 
