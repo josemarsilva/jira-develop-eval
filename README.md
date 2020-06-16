@@ -46,6 +46,8 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
 * [Jira Cloud Platform](https://developer.atlassian.com/cloud/jira/platform/getting-started/)
 * [Jira Atlassian Connect](https://developer.atlassian.com/cloud/jira/platform/integrating-with-jira-cloud/)
 * NodeJs
+* [Atlassian Plugin SDK](https://developer.atlassian.com/server/framework/atlassian-sdk/set-up-the-atlassian-plugin-sdk-and-build-a-project/)
+* Java JDK 1.8
 
 ## 4. Project
 
@@ -66,7 +68,7 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
   * Integrations
   * Library
 
-* [Instaling Script Runner for Jira](./doc/install-script-runner-for-jira-cloud.md)
+* Step-by-step: [Instaling Script Runner for Jira](./doc/install-script-runner-for-jira-cloud.md)
 
 #### 4.1.2. Installing Jira Workflow Toolbox (JWT)
 
@@ -79,6 +81,7 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
   * Schedules
   * General configuration
 
+* Step-by-step: [Instaling Jira Workflow Toolbox (JWT)](./doc/install-jira-workflow-toolbox-server-step-by-step)
 
 #### 4.1.3. Setting Up your Jira Cloud Platform Environment
 
@@ -95,16 +98,28 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
 * [Setting-up environment and create basic-app using Atlassian Connect](./doc/setting-up-environment-and-create-basic-app-using-atlassian-connect.md)
 
 
-#### 4.1.5. Set up the Atlassian Plugin SDK
+#### 4.1.5. Install the Atlassian SDK on a Windows system
 
 * *Overview*: Setting up Atlassian Plugin SDK
 * *Features*: Setting up Atlassian Plugin SDK
 
-#### 4.1.6. Build an Atlassian Plugin SDK Project
+* [Install Atlassian SDK on Windows - Step by Step](https://developer.atlassian.com/server/framework/atlassian-sdk/install-the-atlassian-sdk-on-a-windows-system/)
 
-* *Overview*: Build an Atlassian Plugin SDK Project
-* *Features*: Build an Atlassian Plugin SDK Project
+#### 4.1.6. Create a HelloWorld plugin project with Atlassian SDK
 
+* *Overview*: Create a HelloWorld plugin project with Atlassian SDK
+* *Features*: Create a HelloWorld plugin project with Atlassian SDK
+
+* Step-01: 
+* Step-02: 
+* Step-03: 
+* Step-04: 
+* Step-05: 
+* Step-06: 
+* Step-07: 
+* Step-08: 
+* Step-09: 
+* Step-10: 
 
 
 ### 4.3. Guide for Configuration
@@ -126,9 +141,7 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
 
 ## I - References
 
-* Tutorial
-  * https://www.youtube.com/watch?v=Nf4UX86o2n8
-
-* Plugin Install Guide
-  * https://marketplace.atlassian.com/apps/6820/scriptrunner-for-jira
-
+* Script Runner for Jira Plugin
+  * [Script Runner for Jira Plugin](https://marketplace.atlassian.com/apps/6820/scriptrunner-for-jira)
+  * [ScriptRunner - Tutorial Write Hello World Program in Jira]()
+* 
