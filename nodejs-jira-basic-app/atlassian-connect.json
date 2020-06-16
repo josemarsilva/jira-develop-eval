@@ -1,0 +1,26 @@
+  {
+     "name": "Hello World Josemar Silva",
+     "description": "Atlassian Connect app",
+     "key": "br.com.josemarsilva.jira.app",
+     "baseUrl": "https://localhost",
+     "vendor": {
+         "name": "Example, Inc.",
+         "url": "http://example.com"
+     },
+     "authentication": {
+         "type": "none"
+     },
+     "apiVersion": 1,
+     "modules": {
+         "generalPages": [
+             {
+                 "url": "/helloworld.html",
+                 "key": "hello-world",
+                 "location": "system.top.navigation.bar",
+                 "name": {
+                     "value": "Hello World Josemar"
+                 }
+             }
+         ]
+     }
+}
