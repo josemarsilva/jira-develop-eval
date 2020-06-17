@@ -1,5 +1,9 @@
 # Java
 target/
+.project
+.settings/
+
+
 
 # User Custom - Not Git
 *.csv
