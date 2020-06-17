@@ -46,7 +46,7 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
 * [Jira Cloud Platform](https://developer.atlassian.com/cloud/jira/platform/getting-started/)
 * [Jira Atlassian Connect](https://developer.atlassian.com/cloud/jira/platform/integrating-with-jira-cloud/)
 * NodeJs
-* [Atlassian Plugin SDK](https://developer.atlassian.com/server/framework/atlassian-sdk/set-up-the-atlassian-plugin-sdk-and-build-a-project/)
+* [Atlassian Plugin SDK](https://developer.atlassian.com/server/framework/atlassian-sdk/tutorials-and-guides/)
 * Java JDK 1.8
 
 ## 4. Project
@@ -67,7 +67,7 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
   * Script Console
   * Integrations
   * Library
-* *Step-by-step*: [Instaling Script Runner for Jira](./doc/install-script-runner-for-jira-cloud.md)
+* *Step-by-step*: [Instaling Script Runner for Jira](./doc/install-script-runner-for-jira-server.md)
 
 #### 4.1.2. Installing Jira Workflow Toolbox (JWT)
 
@@ -134,7 +134,7 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
 
 * Script Runner for Jira Plugin
   * [Script Runner for Jira Plugin](https://marketplace.atlassian.com/apps/6820/scriptrunner-for-jira)
-  * [ScriptRunner - Tutorial Write Hello World Program in Jira]()
+  * [ScriptRunner - Tutorial Write Hello World Program in Jira](https://www.youtube.com/watch?v=Nf4UX86o2n8&list=PL_E9T0Z4ua164VpnStW9mUTnXXJptcQlO)
 * Atlassian Plugin SDK
   * https://developer.atlassian.com/display/DOCS/Introduction+to+the+Atlassian+Plugin+SDK
   * [JIRA Plugin development Totorial 1](https://www.youtube.com/watch?v=oDvY4RWqxMg)
