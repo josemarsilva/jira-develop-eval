@@ -14,9 +14,11 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
   * [Guide for Users, Developers and Administrators](#41-Guide-for-Users---Developers-and-Administrators)
     * [Installing Script Runner for Jira](#411-Installing-Script-Runner-for-Jira)
     * [Installing Jira Workflow Toolbox JWT](#412-installing-jira-workflow-toolbox-jwt)
+    * [Setting up your Jira Cloud Platform Environment](#413-setting-up-your-jira-cloud-platform-environment)
     * [Setting up your NodeJS environment and Creating a Basic App with Atlassian Connect](#414-setting-up-your-nodejs-environment-and-creating-a-basic-app-with-atlassian-connect)
     * [Set up the Atlassian Plugin SDK](#415-set-up-the-atlassian-plugin-sdk)
     * [Build an Atlassian Plugin SDK Project](#416-build-an-atlassian-plugin-sdk-project)
+    * [Create a HelloWorld module plugin project with Atlassian SDK](#417-create-a-helloworld-module-plugin-project-with-atlassian-sdk)
   * [Guide for Configuration](#43-Guide-for-Configuration)
   * [Guide for Test](#44-Guide-for-Test)
   * [Guide for Demonstration](#45-Guide-for-Demonstration)
@@ -111,6 +113,117 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
 * *Overview*: Create a HelloWorld module plugin project with Atlassian SDK
 * *Features*: Create a HelloWorld module plugin project with Atlassian SDK
 * *Step-by-step*: [Create a HelloWorld module plugin project with Atlassian SDK](./doc/create-atlassian-sdk-module-plugin-helloworld.md)
+
+#### 4.1.8. Run a HelloWorld in Script Console from ScriptRunner
+
+* *Overview*: Run a HelloWorld in Script Console from ScriptRunner
+* *Features*: Script Console
+* *Step-by-step*: 
+
+* *Step-01*: Navigate to Jira menu `Configuration >> Manage Apps`
+  * On Jira left menu navigate to menu item `Script Runner >> Console` 
+
+* *Step-02*: On page `Script Console` from `Manage Apps >> Script Runner >> Console` fill script text with:
+
+```groovy
+return "Hello World"
+```
+
+```console
+Hello World
+```
+
+#### 4.1.9. Groovy script get Jira fields from an Issue
+
+* *Overview*: Groovy script get Jira fields from issue
+* *Features*: 
+  * Script Console
+  * `import` libraries from Groovy scripts
+  * Libraries: `Issue`, `IssueManager`, `MutableIssue`, `ComponentAccessor`
+* *Step-by-step*: 
+
+* *Step-01*: Navigate to Jira menu `Configuration >> Manage Apps`
+  * On Jira left menu navigate to menu item `Script Runner >> Console` 
+  * On page `Script Console` from `Manage Apps >> Script Runner >> Console` fill script text with:
+
+```groovy
+import com.atlassian.jira.issue.Issue;
+import com.atlassian.jira.issue.IssueManager;
+import com.atlassian.jira.issue.MutableIssue;
+import com.atlassian.jira.component.ComponentAccessor;
+
+IssueManager im = ComponentAccessor.getIssueManager();
+MutableIssue issue = im.getIssueObject("DEMO-1");
+return issue.getSummary();
+// return issue.getStatus();
+// return issue.getStatus().name;
+// return issue.getPriority();
+```
+
+```console
+Teste 1
+// IssueConstantImpl[[GenericEntity:Status][sequence,1][statuscategory,2][name,Open][iconurl,/images/icons/statuses/open.png][description,The issue is open and ready for the assignee to start work on it.][id,1]]
+// IssueConstantImpl[[GenericEntity:Priority][sequence,3][statusColor,#ffab00][name,Medium][iconurl,/images/icons/priorities/medium.png][description,Has the potential to affect progress.][id,3]]
+```
+
+#### 4.1.10. Groovy script get Custom fields from an Issue
+
+* *Overview*: Groovy script get Custom fields from an Issue
+* *Features*: 
+  * Script Console
+  * `import` libraries from Groovy scripts
+  * Libraries: `Issue`, `IssueManager`, `CustomFieldManager`, `ComponentAccessor`
+* *Step-by-step*: 
+
+* *Step-01*: Navigate to Jira menu `Configuration >> Manage Apps`
+  * On Jira left menu navigate to menu item `Script Runner >> Console` 
+  * On page `Script Console` from `Manage Apps >> Script Runner >> Console` fill script text with:
+
+```groovy
+import com.atlassian.jira.issue.CustomFieldManager;
+import com.atlassian.jira.component.ComponentAccessor;
+
+def issueKey = "DEMO-1"
+def issueManager = ComponentAccessor.getIssueManager()
+def issueObject = issueManager.getIssueObject(issueKey)
+def customFieldManager = ComponentAccessor.getCustomFieldManager()
+def customField1 = issueObject.getCustomFieldValue(customFieldManager.getCustomFieldObjectByName("Custom Field 1"))
+```
+
+```console
+Teste
+```
+
+#### 4.1.11. Groovy script get/set Jira fields from an Issue
+
+* *Overview*: Groovy script get/set Jira fields from an Issue
+* *Features*: 
+  * Script Console
+  * `import` libraries from Groovy scripts
+  * Libraries: `Issue`, `IssueManager`, `MutableIssue`, `ComponentAccessor`
+* *Step-by-step*: 
+
+* *Step-01*: Navigate to Jira menu `Configuration >> Manage Apps`
+  * On Jira left menu navigate to menu item `Script Runner >> Console` 
+  * On page `Script Console` from `Manage Apps >> Script Runner >> Console` fill script text with:
+
+```groovy
+import com.atlassian.jira.issue.Issue;
+import com.atlassian.jira.component.ComponentAccessor;
+
+def issueKey = "DEMO-1"
+def issueManager = ComponentAccessor.getIssueManager()
+def issueObject  = issueManager.getIssueObject("DEMO-1");
+def creatorId = issueObject.getCreatorId()
+def creator = issueObject.getCreator()
+issueObject.setAssigneeId(creatorId)
+return "creatorId: " + creatorId + " | creator: " + creator
+```
+
+```console
+creatorId: JIRAUSER10000 | creator: admin(JIRAUSER10000)
+```
+
 
 
 ### 4.3. Guide for Configuration
