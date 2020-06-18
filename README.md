@@ -229,6 +229,13 @@ creatorId: JIRAUSER10000 | creator: admin(JIRAUSER10000)
 ```
 
 
+#### 4.1.12. Setup Atlassian SDK enviroment to Adaptavist ScriptRunner
+
+* *Overview*: Setup `settings.xml` to integrade Development environment to Adaptavist ScriptRunner
+* *Features*: 
+  * Configure `..\Atlassian\..\maven\..\config\settings.xml`
+
+* *Step-by-step*: [Setup Atlassian SDK enviroment to Adaptavist ScriptRunner](./doc/setup-scriptrunner-dev-environment-for-eclipse-step-by-step.md)
 
 ### 4.3. Guide for Configuration
 

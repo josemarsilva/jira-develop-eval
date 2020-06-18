@@ -18,18 +18,18 @@ C:\..\jira-develop-eval>
 
 ```cmd
 C:\..\java-jira-plugin-helloworld> atlas-create-jira-plugin
-Define value for groupId: : br.com.josemarsilva
-Define value for artifactId: : jirapluginhelloworld
-Define value for version: 1.0.0-SNAPSHOT: : 1.0.0-SNAPSHOT
-Define value for package: br.com.josemarsilva: : br.com.josemarsilva.jiraplugin.jirapluginhelloworld
+Define value for groupId: : br.com.josemarsilva.jira
+Define value for artifactId: : java-jira-plugin-helloworld
+Define value for version: 1.0.0-SNAPSHOT: : 1.0.0
+Define value for package: br.com.josemarsilva.jira: : br.com.josemarsilva.jira.javajirapluginhelloworld
   :
 ```
 
 * Step-03: Execute o seu plugin Jira instalado neste ambiente virtual do Jira
 
 ```cmd
-C:\..\jira-develop-eval> cd jirapluginhelloworld
-C:\..\jirapluginhelloworld> atlas-run
+C:\..\jira-develop-eval> cd java-jira-plugin-helloworld
+C:\..\java-jira-plugin-helloworld> atlas-run
            :
 [INFO] [talledLocalContainer] INFORMAÇÕES: Server startup in 126251 ms
 [INFO] [talledLocalContainer] Tomcat 8.x started on port [2990]
@@ -59,33 +59,34 @@ C:\..\jirapluginhelloworld> atlas-run
 * Step-06: Modifique as informações de configurações do plugin presentes no `pom.xml`
 
 ```cmd
-C:\..\jirapluginhelloworld> cd jirapluginhelloworld
-C:\..\jirapluginhelloworld> notepad pom.xml
+C:\..\jira-develop-eval> cd java-jira-plugin-helloworld
+C:\..\java-jira-plugin-helloworld> notepad pom.xml
    :
 <?xml version="1.0" encoding="UTF-8"?>
-   :
+		:
     <organization>
         <name>Josemar F. A. Silva</name>
         <url>https://github.com/josemarsilva/jira-develop-eval</url>
     </organization>
-   :
-    <name>Jira Plugin Hello World</name>
-    <description>Este e o exemplo de plugin br.com.josemarsilva:jirapluginhelloworld plugin for Atlassian JIRA.</description>
+		:
+    <name>java-jira-plugin-helloworld</name>
+    <description>This is the br.com.josemarsilva.jira:java-jira-plugin-helloworld plugin for Atlassian JIRA.</description>
     <packaging>atlassian-plugin</packaging>
-   :
+		:
 ```
 
 * Step-07: Execute o seu plugin Jira instalado neste ambiente virtual do Jira
   * Execute o comando `atlas-run`
   * Acessar pelo browser [http://localhost:2990/jira] o ambiente virtual do Jira com a nova versão do plugin instalada
   * Efetue o login com as credenciais (username e password): `admin` e `admin`
-  * Navegue para menu do Jira `Configurações >> Aplicações` e em seguida, clique na aba `Extras` e no botão de menu lateral esquerdo `Gerenciar apps`
-    * Localize a linha correspondente ao plugin `jirapluginhelloworld` e clique para expandir
+  * Navegue para menu do Jira `Configurações >> Aplicações` e em seguida, clique na aba `Extras` 
+    * Clique no botão de menu lateral esquerdo `Gerenciar apps`
+    * Localize a linha correspondente ao plugin `java-jira-plugin-helloworld` e clique para expandir
      * Observe as informações: `Descrição`, `Fornecedor`
       * clique no link `1 de 1 módulos` para analisar os módulos`
         * Observe que há um `resource` do tipo Web Resources
 
-C:\..\jirapluginhelloworld> atlas-run
+C:\..\java-jira-plugin-helloworld> atlas-run
            :
 [INFO] [talledLocalContainer] INFORMAÇÕES: Server startup in 126251 ms
 [INFO] [talledLocalContainer] Tomcat 8.x started on port [2990]
@@ -99,8 +100,8 @@ C:\..\jirapluginhelloworld> atlas-run
 * Step-09: Criar módulo de plugin 
 
 ```cmd
-C:\..\jirapluginhelloworld> cd jirapluginhelloworld
-C:\..\jirapluginhelloworld> atlas-create-jira-plugin-module
+C:\..\jira-develop-eval> cd java-jira-plugin-helloworld
+C:\..\java-jira-plugin-helloworld> atlas-create-jira-plugin-module
 Choose a number: 30
 Enter Plugin Module Name My Web Section: : jirapluginhelloworld
 Enter Location (e.g. system.admin/mynewsection): my-item-link-helloworld
