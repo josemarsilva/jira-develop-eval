@@ -252,10 +252,19 @@ creatorId: JIRAUSER10000 | creator: admin(JIRAUSER10000)
 * Script Runner for Jira Plugin
   * [Script Runner for Jira Plugin](https://marketplace.atlassian.com/apps/6820/scriptrunner-for-jira)
   * [ScriptRunner - Tutorial Write Hello World Program in Jira](https://www.youtube.com/watch?v=Nf4UX86o2n8&list=PL_E9T0Z4ua164VpnStW9mUTnXXJptcQlO)
+  * [ScriptRunner - Scripting Other Plugins](https://scriptrunner.adaptavist.com/4.3.5/jira/scripting-other-plugins.html)
 * Atlassian Plugin SDK
+  * [Tutorials and guides](https://developer.atlassian.com/server/framework/atlassian-sdk/tutorials-and-guides/)
   * https://developer.atlassian.com/display/DOCS/Introduction+to+the+Atlassian+Plugin+SDK
   * [JIRA Plugin development Totorial 1](https://www.youtube.com/watch?v=oDvY4RWqxMg)
   * [JIRA Plugin development Totorial 2](https://www.youtube.com/watch?v=Aos2ExZcOB0)
   * [JIRA Plugin development Totorial 3](https://www.youtube.com/watch?v=k6J0oIvrvk4)
   * [JIRA Plugin development Totorial 4](https://www.youtube.com/watch?v=-s-5-M9O-Ao) 
   * [Create a Hello World Plugin Project](https://developer.atlassian.com/server/framework/atlassian-sdk/create-a-helloworld-plugin-project/)
+* How-To integrate Jira with custom JAR's
+  * [How to add a custom jar in a Jira Plugin?](https://community.developer.atlassian.com/t/how-to-add-a-custom-jar-in-a-jira-plugin/38439/3)
+  * [Can we invoke a java artifacts or java jar files or dot net dll files from the scriptrunner plugin](https://community.atlassian.com/t5/Marketplace-Apps-Integrations/Can-we-invoke-a-java-artifacts-or-java-jar-files-or-dot-net-dll/qaq-p/939259) 
+  * [Work with your Jira plugin from Adaptivist ScriptRunner or how to avoid code duplication](https://community.atlassian.com/t5/Jira-articles/Work-with-your-Jira-plugin-from-Adaptivist-ScriptRunner-or-how/ba-p/719050)
+  * [How to call a SOAP Web Service from Jira 7.2.x plugin](https://community.atlassian.com/t5/Agile-articles/How-to-call-a-SOAP-Web-Service-from-Jira-7-2-x-plugin/ba-p/1010338)
+  * [How to write a JIRA plugin (custom field) to call webservice of other application server](https://community.atlassian.com/t5/Answers-Developer-Questions/How-to-write-a-JIRA-plugin-custom-field-to-call-webservice-of/qaq-p/4725070)
+  
