@@ -33,18 +33,7 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
 
 ## 2. Diagrams
 
-### 2.1. Use Case Diagram
-
-```cmd
-![UseCaseDiagram-Context.png](./doc/UseCaseDiagram-Context.png) 
-```
-
-### 2.2. Deploy Diagram
-
-```cmd
-![DeployDiagram-Context.png](./doc/DeployDiagram-Context.png) 
-```
-
+* n/a
 
 ## 3. Technologies Used
 * Jira Software (Cloud)
