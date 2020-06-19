@@ -1,6 +1,7 @@
 ### modify-user-custom-plugin-using-atlassian-sdk-with-multiples-methods.md
 
-1. Localizar os códigos fontes que ddeverão ser alterados
+
+#### 1. Localizar os códigos fontes que ddeverão ser alterados
 
 1.1. Na pasta do projeto consultar os projetos do tipo Java Atlassian SDK existentes
 
@@ -25,7 +26,7 @@ Pasta de C:\GitHome\ws-github-09\jira-develop-eval\java-jira-plugin-helloworld\s
 	:
 ```
 
-2. Criar a nova Interface HashMap<String,String> com sua respectiva implementação
+#### 2. Criar a nova Interface HashMap<String,String> com sua respectiva implementação
 
 2.1. Editar o programa `MyPluginComponent.java`
 
@@ -71,7 +72,7 @@ import java.util.HashMap;
 	:
 ```
 
-3. Editar as configurações de pacotes para a alteração da versão
+#### 3. Editar as configurações de pacotes para a alteração da versão
 
 3.1. Editar o arquivo `pom.xml`
 
@@ -87,7 +88,7 @@ C:\..\java-jira-plugin-helloworld> notepad pom.xml
 	:
 ```
 
-4. Gerar uma nova versão do pacote
+#### 4. Gerar uma nova versão do pacote
 
 4.1. **atlas-clean**: Chamar o equivalente a _Maven Clean_ no Atlassian SDK
 
@@ -101,7 +102,7 @@ C:\..\java-jira-plugin-helloworld> atlas-clean
 C:\..\java-jira-plugin-helloworld> atlas-package
 ```
 
-5. Carregar no Jira a nova versão do pacote com o plugin
+#### 5. Carregar no Jira a nova versão do pacote com o plugin
 
 5.1. Localizar o arquivo (.obr)
 
@@ -126,9 +127,7 @@ C:\..\java-jira-plugin-helloworld> dir target\java-jira*
 * Aguarde a instalação até que seja apresentada uma caixa de diálogo informando `Installed and ready to go!` `java-jira-plugin-helloworld v. 2020.06.19.1825`
 * Clique no botão `Close`
 
-
-
-6. Execute a chamada do plugin pela ScriptRunner Console
+#### 6. Execute a chamada do plugin pela ScriptRunner Console
 
 6.1. Entre no Console de execução do ScriptRunner
 
