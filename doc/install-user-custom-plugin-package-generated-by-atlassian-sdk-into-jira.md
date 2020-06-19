@@ -101,16 +101,16 @@ public class MyPluginComponentImpl implements MyPluginComponent
 2.2. Navegue para o menu `Configuração >> Jira Administration >> Manage Apps`
 2.3. Na página de `Administration` clique na aba de menu superior `Manage Apps`, em seguida no botão lateral esquerdo `Manage App` e em seguida link `Upload app`
 
-![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-01.png](./doc/PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-01.png) 
+![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-01.png](./PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-01.png) 
 
 2.4. Na caixa de diálogo `Upload app` clique no botão `Choose file` e informe a localização do arquivo (.obr) com o binário de seu plugin `C:\..\java-jira-plugin-helloworld\target\java-jira-plugin-helloworld\java-jira-plugin-helloworld-1.0.0.obr` e em seguida clique no botão `Upload`
 
-![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-02.png](./doc/PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-02.png) 
+![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-02.png](./PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-02.png) 
 
 2.5. Aguarde a instalação do Plugin pelo Jira
 
-![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-03.png](./doc/PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-03.png) 
-![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-04.png](./doc/PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-04.png) 
+![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-03.png](./PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-03.png) 
+![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-04.png](./PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-04.png) 
 
 2.6. Observe que o seu plugin customizado pelo Atlassian SDK agora faz parte desta instalação do Jira
 
@@ -118,17 +118,17 @@ public class MyPluginComponentImpl implements MyPluginComponent
   * Versão: `1.0.0`
   * App Key: `br.com.josemarsilva.jira.java-jira-plugin-helloworld`
 
-![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-05.png](./doc/PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-05.png) 
+![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-05.png](./PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-05.png) 
 
 3. Executando o plugin customizado pelo Atlassian SDK no Jira pela Console do ScriptRunner
 
 3.1. Na página de `Administration` clique na aba de menu superior `Manage Apps`, em seguida no botão lateral esquerdo `Console`
 
-![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-06.png](./doc/PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-06.png) 
+![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-06.png](./PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-06.png) 
 
 3.2. Na página de `Script Console` localize o campo `Enter the script to Execute` e o botão `Run`. Nos próximos passos você deverá colocar trechos de scripts no campo co o script e clicar no botão `Run` para executar os scripts. Como resultado irá aparecer uma região de resultados identificada por `Result`, uma região de `Logs` onde são registrados os debug's da aplicação e uma região de métricas de execução `Timing` 
 
-![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-07.png](./doc/PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-07.png) 
+![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-07.png](./PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-07.png) 
 
 3.3. Na página de `Script Console` entre com o seguinte script para executar
 
@@ -161,5 +161,5 @@ def componentPlugin = myPluginComponent.getName()
 myComponent:JIRA
 ```
 
-![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-08.png](./doc/PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-08.png) 
+![PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-08.png](./PrintScreen-install-UserCustomPluginGeneratedByAtlassianSdk-08.png) 
 
