@@ -8,6 +8,8 @@ import br.com.josemarsilva.jira.java_jira_plugin_helloworld.api.MyPluginComponen
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import java.util.HashMap;
+
 @ExportAsService ({MyPluginComponent.class})
 @Named ("myPluginComponent")
 public class MyPluginComponentImpl implements MyPluginComponent
@@ -30,4 +32,15 @@ public class MyPluginComponentImpl implements MyPluginComponent
         
         return "myComponent";
     }
+
+    public HashMap<String,String> getHashMap() {
+    	HashMap<String,String> hashMap = new HashMap<String,String>();
+    	hashMap.put("um", "one");
+    	hashMap.put("dois", "two");
+    	hashMap.put("tres", "three");
+    	hashMap.put("quatro", "four");
+    	hashMap.put("cinco", "five");
+    	return hashMap;
+    }
+
 }
