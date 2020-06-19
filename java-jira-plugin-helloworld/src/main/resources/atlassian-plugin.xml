@@ -1,0 +1,24 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="java-jira-plugin-helloworld"/>
+    
+    <!-- add our web resources -->
+    <web-resource key="java-jira-plugin-helloworld-resources" name="java-jira-plugin-helloworld Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        
+        <resource type="download" name="java-jira-plugin-helloworld.css" location="/css/java-jira-plugin-helloworld.css"/>
+        <resource type="download" name="java-jira-plugin-helloworld.js" location="/js/java-jira-plugin-helloworld.js"/>
+        <resource type="download" name="images/" location="/images"/>
+
+        <context>java-jira-plugin-helloworld</context>
+    </web-resource>
+    
+</atlassian-plugin>

@@ -1,0 +1,18 @@
+# Java
+target/
+.project
+.settings/
+
+
+
+# User Custom - Not Git
+*.csv
+*.tmp
+*-tmp
+tmp-*
+*-tmp-*
+*.log
+
+# Ignore Microsoft Office temporary files
+~$*.xls*
+~$*.ppt*

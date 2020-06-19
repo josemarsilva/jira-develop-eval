@@ -21,7 +21,7 @@ C:\..\java-jira-plugin-helloworld> atlas-create-jira-plugin
 Define value for groupId: : br.com.josemarsilva.jira
 Define value for artifactId: : java-jira-plugin-helloworld
 Define value for version: 1.0.0-SNAPSHOT: : 1.0.0
-Define value for package: br.com.josemarsilva.jira: : br.com.josemarsilva.jira.javajirapluginhelloworld
+Define value for package: br.com.josemarsilva.jira: : br.com.josemarsilva.jira.java_jira_plugin_helloworld
   :
 ```
 
@@ -50,6 +50,36 @@ C:\..\java-jira-plugin-helloworld> atlas-run
 |                                                   |  Username: [ admin ]  |  |
 |                                                   |  Password: [ admin ]  |  |
 |                                                   +-----------------------+  |
++------------------------------------------------------------------------------+
+```
+
+* Continue clicando no botão próximo para as perguntas:
+  * Qual a linguagem? Resp: Portuges
+* Em seguida clique na botão `Criar projeto de amostra`
+  * Na caixa de diálogo `Criar projeto com dados de exemplo` clique no botão `Próximo`
+  * Na caixa d ediálogo `Gerenciamento de projetos` preencher os campos da seguinte forma:
+    * Nome:  `DEMO`
+	* Chave: `DEMO`
+	* Clique no botão `Enviar`
+
+```browser
++------+-----------------------------------------------------------------------+
+| url: | http://localhost:2990                                                 |
++------+-----------------------------------------------------------------------+
+| +---------------+ +-------------+ +------------------+                       |
+| | Criar projeto | |  Criar novo | | Importar de      |                       |
+| | de amostra    | |  Projeto    | | outra ferramenta |                       |
+| +---------------+ +-------------+ +------------------+                       |
++------------------------------------------------------------------------------+
+```
+
+* Pronto! Uma instância de Jira foi iniciada parao você. Nela tem um projeto de exemplo chamado DEMO com alguns 
+
+```browser
++------+-----------------------------------------------------------------------+
+| url: | http://localhost:2990                                                 |
++------+-----------------------------------------------------------------------+
+| | Jira Software | Painéis | Projeto | Itens | Dbcosole | Criar |               |
 +------------------------------------------------------------------------------+
 ```
 
