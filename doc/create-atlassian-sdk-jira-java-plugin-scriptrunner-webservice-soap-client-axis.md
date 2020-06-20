@@ -34,13 +34,11 @@ Y : : Y
 C:\> notepad C:\..\jira-develop-eval\pom.xml
 ```
 
-### 4. Executar o Maven/Atlassian `clean` e `package` 
+### 4. Gerar o pacote executável (.obr) do Plugin
 
-4.1. Executar Maven/Atlassian CLEAN
-4.2. Executar Maven/Atlassian PACKAGE
-4.3. Conferir o Pacote Gerado
-
-
+* [4.1. Executar o Maven/Atlassian-SDK CLEAN do projeto](setup-scriptrunner-dev-environment-for-eclipse-step-by-step.md#4-executar-o-mavenatlassian-sdk-clean-do-projeto)
+* [4.2. Executar o Maven/Atlassian-SDK PACKAGE do projeto](setup-scriptrunner-dev-environment-for-eclipse-step-by-step.md#5-executar-o-mavenatlassian-sdk-package-do-projeto)
+* [4.3. Conferir o pacote gerado](setup-scriptrunner-dev-environment-for-eclipse-step-by-step.md#6-conferir-o-pacote-gerado)
 
 
 ### Referencias
