@@ -1,6 +1,6 @@
 ### example-groovy-script-console-with-apache-log4j.md
 
-1. Na página de `Administration` clique na aba de menu superior `Manage Apps`, em seguida no botão lateral esquerdo `Console`
+#### 1. Na página de `Administration` clique na aba de menu superior `Manage Apps`, em seguida no botão lateral esquerdo `Console`
 
 1.1. Edit o seguinte script
 
