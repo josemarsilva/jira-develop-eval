@@ -20,9 +20,9 @@
 
 ```cmd
 C:\> notepad C:\Apps\Atlassian\atlassian-plugin-sdk-8.0.16\apache-maven-3.5.4\conf\settings.xml
-		:
-	<repositories>
-		:
+        :
+    <repositories>
+        :
     <!-- Atlassian repositories will be listed above this line -->
     <!-- Adaptavist repositories are below -->
     <repository>
@@ -54,8 +54,8 @@ C:\> notepad C:\Apps\Atlassian\atlassian-plugin-sdk-8.0.16\apache-maven-3.5.4\co
     </repository>
     <!-- End of Adaptavist maven repositories -->
 
-	:
-	</repositories>
+    :
+    </repositories>
 ```
 
 ### 3. Configurar POM.XML do projeto para incluir as dependências do ScriptRunner
@@ -64,29 +64,33 @@ C:\> notepad C:\Apps\Atlassian\atlassian-plugin-sdk-8.0.16\apache-maven-3.5.4\co
 
 ```cmd
 C:\> notepad C:\..\jira-develop-eval\pom.xml
-		:
-    	<!-- Add dependency on ScriptRunner Adaptavist -->
-		<dependency>
-		  <groupId>com.onresolve.jira.groovy</groupId>
-		  <artifactId>groovyrunner</artifactId>
-		  <version>4.1.3.26</version>
-		  <scope>provided</scope>
-		</dependency>
+        :
+    <dependencies>
+        :
+        <!-- Add dependency on ScriptRunner Adaptavist -->
+        <dependency>
+          <groupId>com.onresolve.jira.groovy</groupId>
+          <artifactId>groovyrunner</artifactId>
+          <version>4.1.3.26</version>
+          <scope>provided</scope>
+        </dependency>
 
-		<dependency>
-		  <groupId>org.codehaus.groovy</groupId>
-		  <artifactId>groovy-all</artifactId>
-		  <version>${groovy.version}</version>
-		  <scope>provided</scope>
-		</dependency>
-		:
-		<properties>
-				:
-			<groovy.version>2.2.1</groovy.version>
-			<scriptrunner.version>4.1.3.26</scriptrunner.version>
-				:
-		</properties>
-		:
+        <dependency>
+          <groupId>org.codehaus.groovy</groupId>
+          <artifactId>groovy-all</artifactId>
+          <version>${groovy.version}</version>
+          <scope>provided</scope>
+        </dependency>
+        :
+    <dependencies>
+        :
+        <properties>
+                :
+            <groovy.version>2.2.1</groovy.version>
+            <scriptrunner.version>4.1.3.26</scriptrunner.version>
+                :
+        </properties>
+        :
 ```
 
 ### 4. Executar o Maven/Atlassian-SDK CLEAN do projeto
@@ -132,10 +136,10 @@ Executing: "C:\Apps\Atlassian\atlassian-plugin-sdk-8.0.16\apache-maven-3.5.4\bin
 [INFO] --------< br.com.josemarsilva.jira:java-jira-plugin-helloworld >--------
 [INFO] Building java-jira-plugin-helloworld 1.0.0
 [INFO] --------------------------[ atlassian-plugin ]--------------------------
-		:
+        :
 [INFO] Starting Atlassian Spring Byte Code Scanner...
 [INFO]
-		:
+        :
 [INFO]
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
@@ -147,7 +151,7 @@ Executing: "C:\Apps\Atlassian\atlassian-plugin-sdk-8.0.16\apache-maven-3.5.4\bin
 [INFO]
 [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO]
-		:
+        :
 [INFO] Building jar: C:\GitHome\ws-github-09\jira-develop-eval\java-jira-plugin-helloworld\target\java-jira-plugin-helloworld-1.0.0.jar
 [INFO]
 [INFO] --- jira-maven-plugin:8.0.2:generate-obr-artifact (default-generate-obr-artifact) @ java-jira-plugin-helloworld ---
@@ -181,11 +185,11 @@ C:\..\java-jira-plugin-helloworld> dir .\target\java-jira-plugin-helloworld*
 ```
 
 ```console
-	:
+    :
 19/06/2020  12:02         1.739.984 java-jira-plugin-helloworld-1.0.0-tests.jar
 19/06/2020  12:02           272.246 java-jira-plugin-helloworld-1.0.0.jar
 19/06/2020  12:02           238.478 java-jira-plugin-helloworld-1.0.0.obr
-	:
+    :
 ```
 
 ---

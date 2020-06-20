@@ -111,7 +111,7 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
 
 * *Overview*: Create a HelloWorld module plugin project with Atlassian SDK
 * *Features*: Create a HelloWorld module plugin project with Atlassian SDK
-* *Step-by-step*: [Create a HelloWorld module plugin project with Atlassian SDK](./doc/create-atlassian-sdk-module-plugin-helloworld.md)
+* *Step-by-step*: [Create a HelloWorld module plugin project with Atlassian SDK]  `(./doc/create-atlassian-sdk-module-plugin-helloworld.md)`
 
 #### 4.1.8. Groovy script Run a HelloWorld in Script Console from ScriptRunner
 
