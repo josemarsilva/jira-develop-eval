@@ -1,13 +1,19 @@
 ### setup-scriptrunner-dev-environment-for-eclipse-step-by-step.md
 
 
-1. Navegar para o menu do Eclipse `Windows >> Preference`
-1.1. Na caixa de diálogo `Preference` clicar no list-box menu lateral esquerdo `Maven` e expandir a árvore
-1.2. No list-box menu com a árvore de `Maven` expandida clicar no sub-menu `User settings`
-1.3. Na caixa de diálogo `User Settings` da hierarquia de menu `Prefrences >> Maven >> User Settings`
+### 1. Configurar o Maven do Eclipse apontando para a instalação customizada pelo Atlassian SDK
+
+1.1. Navegar para o menu do Eclipse `Windows >> Preference`
+1.2. Na caixa de diálogo `Preference` clicar no list-box menu lateral esquerdo `Maven` e expandir a árvore
+1.3. No list-box menu com a árvore de `Maven` expandida clicar no sub-menu `User settings`
+1.4. Na caixa de diálogo `User Settings` da hierarquia de menu `Prefrences >> Maven >> User Settings`
   * Alterar o campo `User Settings` para a configuração que está no diretório do **Atlas**
   * `C:\Apps\Atlassian\atlassian-plugin-sdk-8.0.16\apache-maven-3.5.4\conf\settings.xml`
-2. Incluir os repositorios customizados do **ScriptRunner Jira**
+
+
+
+### 2. Configurar o Maven customizado pela Atlassian SDK para incluir as bibliotecas do ScriptRunner
+
 2.1. Editar o arquivo `C:\Apps\Atlassian\atlassian-plugin-sdk-8.0.16\apache-maven-3.5.4\conf\settings.xml`
 2.2. Localizar o trecho `<repositories>`
 2.3. Incluir o trecho abaixo com os repositorios customizados
@@ -52,7 +58,9 @@ C:\> notepad C:\Apps\Atlassian\atlassian-plugin-sdk-8.0.16\apache-maven-3.5.4\co
 	</repositories>
 ```
 
-2.4. Configurar `pom.xml` e incluir os trechos de dependências `<dependencies> .. </dependencies>` e propriedades `<properties> .. </properties>`:
+### 3. Configurar POM.XML do projeto para incluir as dependências do ScriptRunner
+
+3.1. Configurar `pom.xml` e incluir os trechos de dependências `<dependencies> .. </dependencies>` e propriedades `<properties> .. </properties>`:
 
 ```cmd
 C:\> notepad C:\..\jira-develop-eval\pom.xml
@@ -100,8 +108,9 @@ C:\> notepad C:\..\jira-develop-eval\pom.xml
 				:
 		</properties>
 		:
+```
 
-2.5. Fazer clean do project
+3.2. Fazer clean do project
 
 ```cmd
 C:\..\java-jira-plugin-helloworld> atlas-clean
@@ -126,7 +135,7 @@ Executing: "C:\Apps\Atlassian\atlassian-plugin-sdk-8.0.16\apache-maven-3.5.4\bin
 [INFO] ------------------------------------------------------------------------
 ```
 
-2.5. Empacotar o projeto e conferir
+3.3. Empacotar o projeto e conferir
 
 ```cmd
 C:\..\java-jira-plugin-helloworld> atlas-package
@@ -180,7 +189,7 @@ Executing: "C:\Apps\Atlassian\atlassian-plugin-sdk-8.0.16\apache-maven-3.5.4\bin
 [INFO] ------------------------------------------------------------------------
 ```
 
-2.6. Conferir o pacote gerado
+3.4. Conferir o pacote gerado
 
 ```cmd
 C:\..\java-jira-plugin-helloworld> dir .\target\java-jira-plugin-helloworld*
