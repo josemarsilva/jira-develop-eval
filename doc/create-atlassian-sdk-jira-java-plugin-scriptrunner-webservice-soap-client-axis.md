@@ -1,7 +1,11 @@
 ### create-atlassian-sdk-jira-java-plugin-scriptrunner-webservice-soap-client-axis.md
 
 
-### 1. Configure o projeto criado e o Workspace do Eclipse para integração com o ScriptRunner
+### 1. Configure o ambiente de desenvolvimento: Atlassian SDK, Eclipse e Maven/Atlassian SDK
+
+* [Configurar o Maven do Eclipse apontando para a instalação customizada pelo Atlassian SDK](setup-scriptrunner-dev-environment-for-eclipse-step-by-step.md#1-configurar-o-maven-do-eclipse-apontando-para-a-instalação-customizada-pelo-atlassian-sdk)
+  * __dica__: Recomendo que você separe um Workspace do Eclipse para esta configuração
+* [Configurar o Maven customizado pela Atlassian SDK para incluir as bibliotecas do ScriptRunner](setup-scriptrunner-dev-environment-for-eclipse-step-by-step.md#2-configurar-o-maven-customizado-pela-atlassian-sdk-para-incluir-as-bibliotecas-do-scriptrunner)
 
 
 ### 1. Criar o projeto do Jira plugin com o Atlassian SDK
