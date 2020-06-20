@@ -79,27 +79,6 @@ C:\> notepad C:\..\jira-develop-eval\pom.xml
 		  <version>${groovy.version}</version>
 		  <scope>provided</scope>
 		</dependency>
-        <!--
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>1.8.5</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.1.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.6.6</version>
-            <scope>provided</scope>
-        </dependency>
-        -->
-
 		:
 		<properties>
 				:
@@ -110,7 +89,9 @@ C:\> notepad C:\..\jira-develop-eval\pom.xml
 		:
 ```
 
-3.2. Fazer clean do project
+### 4. Executar o Maven/Atlassian-SDK CLEAN do projeto
+
+4.1. Maven CLEAN
 
 ```cmd
 C:\..\java-jira-plugin-helloworld> atlas-clean
@@ -135,7 +116,9 @@ Executing: "C:\Apps\Atlassian\atlassian-plugin-sdk-8.0.16\apache-maven-3.5.4\bin
 [INFO] ------------------------------------------------------------------------
 ```
 
-3.3. Empacotar o projeto e conferir
+### 5. Executar o Maven/Atlassian-SDK PACKAGE do projeto
+
+5.1. Maven Package(build)
 
 ```cmd
 C:\..\java-jira-plugin-helloworld> atlas-package
@@ -189,7 +172,9 @@ Executing: "C:\Apps\Atlassian\atlassian-plugin-sdk-8.0.16\apache-maven-3.5.4\bin
 [INFO] ------------------------------------------------------------------------
 ```
 
-3.4. Conferir o pacote gerado
+### 6. Conferir o pacote gerado
+
+6.1. Conferir o pacote gerado
 
 ```cmd
 C:\..\java-jira-plugin-helloworld> dir .\target\java-jira-plugin-helloworld*
