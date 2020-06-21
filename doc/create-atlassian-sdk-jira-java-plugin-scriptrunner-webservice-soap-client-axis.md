@@ -1,5 +1,17 @@
 ### create-atlassian-sdk-jira-java-plugin-scriptrunner-webservice-soap-client-axis.md
 
+* Indice
+  * [1. Configure o ambiente de desenvolvimento: Atlassian SDK, ScriptRunner, Eclipse e Maven/Atlassian SDK](#1-configure-o-ambiente-de-desenvolvimento-atlassian-sdk-scriptrunner-eclipse-e-mavenatlassian-sdk)
+  * [2. Criar o projeto do Jira plugin com o Atlassian SDK](#2-criar-o-projeto-do-jira-plugin-com-o-atlassian-sdk)
+  * [3. Configurar arquivo pom.xml do projeto criado para integrar com ScriptRunner](#3-configurar-arquivo-pomxml-do-projeto-criado-para-integrar-com-scriptrunner)
+  * [4. Gerar o pacote executável (.obr) do Plugin](#4-gerar-o-pacote-executável-obr-do-plugin)
+  * [5. Usar o Eclipse para gerar as classes do WebService SOAP de acesso a consulta de CEP dos Correios](#5-usar-o-eclipse-para-gerar-as-classes-do-webservice-soap-de-acesso-a-consulta-de-cep-dos-correios)
+  * [6. Construir um novo método no Jira Plugin ScriptRunner para retornar a consulta de CEP dos Correios](#6-construir-um-novo-método-no-jira-plugin-scriptrunner-para-retornar-a-consulta-de-cep-dos-correios)
+  * [7. Adicionar as dependências implicitas da geração do Web Service Client pelo Eclipse no arquivo pom.xml para o Atlassian SDK](#7-adicionar-as-dependências-implicitas-da-geração-do-web-service-client-pelo-eclipse-no-arquivo-pomxml-para-o-atlassian-sdk)
+  * [8. Gerar o pacote executável (.obr) do Plugin](#8-gerar-o-pacote-executável-obr-do-plugin)
+  * [9. Instalar o pacote (.obr) do Plugin no Jira](#9-instalar-o-pacote-obr-do-plugin-no-jira)
+  * [10. Execute o plugin no Console do ScriptRunner](#10-execute-o-plugin-no-console-do-scriptrunner)
+  * [Referencias](#referencias)
 
 ### 1. Configure o ambiente de desenvolvimento: Atlassian SDK, ScriptRunner, Eclipse e Maven/Atlassian SDK
 
