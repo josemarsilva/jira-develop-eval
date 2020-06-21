@@ -132,9 +132,13 @@ C:\..\java-plugin-scriptrunner-webservice-soap-client-axis> dir .\target\java-pl
 
 5.1. Primeiramente o End-Point do WSDL do serviço SOAP de homologação dos correios que oferece um método de consulta de CEP que não precisa e autenticação
 * URL: [https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl]
+
 5.2. No Eclipse, navegar para opção de menu: `Eclipse :: File >> New >> Others ...`
+
 5.3. Na caixa de diálogo `New :: Select a Wizard`, escolher o seguinte item da lista de opções hierárquica `Web Services >> Web Service Client` e clicar no botão de `Next`
+
 5.4. Na caixa de diálogo `Web Service Client :: Web Services`, informar no campo `Service Definition` a seguinte informação: `https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl` e em seguida clicar o botão `Finish`
+
 5.5. Neste ponto, o plugin de geração de WebService do Eclipse deverá ter gerado um pacote chamado `br.com.correios.bsb.sigep.master.bean.cliente` abaixo da pasta `src/main/java` de seu projeto
 * Localize:
   * Classe: `br.com.correios.bsb.sigep.master.bean.cliente.AtendeClienteProxy`
