@@ -133,7 +133,7 @@ C:\..\java-plugin-scriptrunner-webservice-soap-client-axis> dir .\target\java-pl
 5.1. Primeiramente o End-Point do WSDL do serviço SOAP de homologação dos correios que oferece um método de consulta de CEP que não precisa e autenticação
 * URL: [https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl]
 
-5.2. No Eclipse, navegar para opção de menu: `Eclipse :: File >> New >> Others ...`
+5.2. No Eclipse, clique com o botão invertido do mouse sobre o projeto para e navegar para opção de menu: `New >> Others ...`
 
 5.3. Na caixa de diálogo `New :: Select a Wizard`, escolher o seguinte item da lista de opções hierárquica `Web Services >> Web Service Client` e clicar no botão de `Next`
 
@@ -150,6 +150,7 @@ C:\..\java-plugin-scriptrunner-webservice-soap-client-axis> dir .\target\java-pl
 ### 6. Construir um novo método no Jira Plugin ScriptRunner para retornar a consulta de CEP dos Correios
 
 6.1. Primeiramente, tenha em mente que o método receberá como entrada um String com o CEP e retornará os atributos deste CEP consultado em uma estrutura HashMap<String,String> ( `Bairro`, `Cep`, `Cidade`, `Complemento2`, `End`, `Uf` ) após acessar o WebService dos Correios.
+
 6.2. Construir o novo método de interface ( __interface__ ) no Plugin Components no arquivo `.src\main\java\br\com\josemarsilva\jira\plugin_scriptrunner_webservice_soap_client_axis\api\MyPluginComponent.java`
 
 ```java
@@ -169,33 +170,37 @@ public interface MyPluginComponent
 ```java
 package br.com.josemarsilva.jira.plugin_scriptrunner_webservice_soap_client_axis.impl;
   :
+import org.apache.commons.logging.LogFactory;
+import java.rmi.RemoteException;
 import java.util.HashMap;
 import br.com.correios.bsb.sigep.master.bean.cliente.AtendeClienteProxy;
 import br.com.correios.bsb.sigep.master.bean.cliente.EnderecoERP;
+import br.com.correios.bsb.sigep.master.bean.cliente.SQLException;
+import br.com.correios.bsb.sigep.master.bean.cliente.SigepClienteException;
   :
     public HashMap<String,String> consultaCep(String cep) {
-    	System.setProperty(LogFactory.FACTORY_PROPERTY, LogFactory.FACTORY_DEFAULT);
-    	HashMap<String, String> returnHashMap = new HashMap<String,String>();
-		AtendeClienteProxy atendeClienteProxy = new AtendeClienteProxy();
-		EnderecoERP enderecoERP = new EnderecoERP();
-		try {
-			enderecoERP  = atendeClienteProxy.consultaCEP(cep);
-			returnHashMap.put("status", "Success");
-			returnHashMap.put("bairro", enderecoERP.getBairro() );
-			returnHashMap.put("cep", enderecoERP.getCep() );
-			returnHashMap.put("cidade", enderecoERP.getCidade() );
-			returnHashMap.put("complemento2", enderecoERP.getComplemento2() );
-			returnHashMap.put("end", enderecoERP.getEnd() );
-			returnHashMap.put("uf", enderecoERP.getUf() );
-		} catch (SQLException e) {
-			returnHashMap.put("status", "SQLException");
-		} catch (SigepClienteException e) {
-			returnHashMap.put("status", "SigepClienteException");
-		} catch (RemoteException e) {
-			returnHashMap.put("status", "RemoteException");
-		}
-    	// return
-		return returnHashMap;
+        System.setProperty(LogFactory.FACTORY_PROPERTY, LogFactory.FACTORY_DEFAULT);
+        HashMap<String, String> returnHashMap = new HashMap<String,String>();
+        AtendeClienteProxy atendeClienteProxy = new AtendeClienteProxy();
+        EnderecoERP enderecoERP = new EnderecoERP();
+        try {
+            enderecoERP  = atendeClienteProxy.consultaCEP(cep);
+            returnHashMap.put("status", "Success");
+            returnHashMap.put("bairro", enderecoERP.getBairro() );
+            returnHashMap.put("cep", enderecoERP.getCep() );
+            returnHashMap.put("cidade", enderecoERP.getCidade() );
+            returnHashMap.put("complemento2", enderecoERP.getComplemento2() );
+            returnHashMap.put("end", enderecoERP.getEnd() );
+            returnHashMap.put("uf", enderecoERP.getUf() );
+        } catch (SQLException e) {
+            returnHashMap.put("status", "SQLException");
+        } catch (SigepClienteException e) {
+            returnHashMap.put("status", "SigepClienteException");
+        } catch (RemoteException e) {
+            returnHashMap.put("status", "RemoteException");
+        }
+        // return
+        return returnHashMap;
     }
   :
 ```
@@ -221,17 +226,17 @@ import br.com.correios.bsb.sigep.master.bean.cliente.EnderecoERP;
             <artifactId>axis</artifactId>
             <version>1.4</version>
         </dependency>
-		<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
-		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging</artifactId>
-			<version>1.2</version>
-		</dependency>
+        <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.2</version>
+        </dependency>
         :
     <dependencies>
         :
                     <instructions>
-							:
+                            :
                         <!-- Add package import here -->
                         <Import-Package>
                             org.springframework.osgi.*;resolution:="optional", 
@@ -251,7 +256,7 @@ import br.com.correios.bsb.sigep.master.bean.cliente.EnderecoERP;
                             org.apache.avalon.framework.logger.*;resolution:="optional", 
                             *
                         </Import-Package>
-							:
+                            :
                     </instructions>
 
 
@@ -304,11 +309,11 @@ C:\..\java-plugin-scriptrunner-webservice-soap-client-axis> dir .\target\java-pl
 10.4. Na página de `Script Console` localize o campo `Enter the script to Execute` e o botão `Run`. Nos próximos passos você deverá colocar trechos de scripts no campo do script e clicar no botão `Run` para executar os scripts. Como resultado irá aparecer uma região de resultados identificada por `Result`, uma região de `Logs` onde são registrados os debug's da aplicação e uma região de métricas de execução `Timing`
 10.5. Na página de Script Console entre com o seguinte script para executar
 * Lembre-se dos atributos registrados de seu plugin e `Configuração >> Jira Administration >> Manage Apps`
-  * `Versão`: `2020.06.20.1515`
+  * `Versão`: `2020.06.20.2220`
   * `App Key`: `br.com.josemarsilva.jira.java-plugin-scriptrunner-webservice-soap-client-axis`
   * Lembre-se do código fonte da interface e da _ implementação_ no Atlassian SDK: 
     * Class: `MyPluginComponent.java`
-	* Method: `public HashMap<String,String> consultaCep(String cep);`
+    * Method: `public HashMap<String,String> consultaCep(String cep);`
 
 ```groovy
 // Import commons libraries
@@ -347,18 +352,20 @@ log.info("hashMap: " + hashMap);
 * Log's
 
 ```log
-2020-06-20 20:33:20,235 INFO [runner.ScriptBindingsManager]: @WithPlugin('br.com.josemarsilva.jira.java-plugin-scriptrunner-webservice-soap-client-axis')
-2020-06-20 20:33:20,237 INFO [runner.ScriptBindingsManager]: @PluginModule
-2020-06-20 20:33:20,239 INFO [runner.ScriptBindingsManager]: myPluginComponent.getName()
-2020-06-20 20:33:20,239 INFO [runner.ScriptBindingsManager]: name: myComponent:JIRA
-2020-06-20 20:33:20,239 INFO [runner.ScriptBindingsManager]: myPluginComponent.consultaCep('13050410')
-2020-06-20 20:33:20,533 INFO [runner.ScriptBindingsManager]: hashMap: [complemento2:, uf:SP, cidade:Campinas, bairro:Cidade Jardim, end:Rua Itapecirica da Serra, status:Success, cep:13050410]
-
+2020-06-20 22:20:52,376 INFO [runner.ScriptBindingsManager]: @WithPlugin('br.com.josemarsilva.jira.java-plugin-scriptrunner-webservice-soap-client-axis')
+2020-06-20 22:20:52,377 INFO [runner.ScriptBindingsManager]: @PluginModule
+2020-06-20 22:20:52,379 INFO [runner.ScriptBindingsManager]: myPluginComponent.getName()
+2020-06-20 22:20:52,380 INFO [runner.ScriptBindingsManager]: name: myComponent:JIRA
+2020-06-20 22:20:52,380 INFO [runner.ScriptBindingsManager]: myPluginComponent.consultaCep('13050410')
+2020-06-20 22:20:52,594 INFO [runner.ScriptBindingsManager]: hashMap: [complemento2:, uf:SP, cidade:Campinas, bairro:Cidade Jardim, end:Rua Itapecirica da Serra, status:Success, cep:13050410]
 ```
 
 ### Referencias
 
-* [Create a simple web service client with WSDL in Eclipse](https://www.youtube.com/watch?v=11iGyrvBhzc)
-* [Youtube - Integrando WebService SOAP - Consulta CEP Correios](https://www.youtube.com/watch?v=FqDenKN5y1s)
-* [https://stackoverflow.com/questions/9460864/common-logging-jar-conflict-with-apache-axis-soap-client]
-* [https://stackoverflow.com/questions/11727768/apache-axis-logging-classcastexception-while-using-it-inside-a-jira-plugin]
+* Tutorial
+   * [Create a simple web service client with WSDL in Eclipse](https://www.youtube.com/watch?v=11iGyrvBhzc)
+   * [Youtube - Integrando WebService SOAP - Consulta CEP Correios](https://www.youtube.com/watch?v=FqDenKN5y1s)
+
+* Troubleshooting
+  * [https://stackoverflow.com/questions/9460864/common-logging-jar-conflict-with-apache-axis-soap-client]
+  * [https://stackoverflow.com/questions/11727768/apache-axis-logging-classcastexception-while-using-it-inside-a-jira-plugin]
