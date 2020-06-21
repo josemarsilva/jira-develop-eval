@@ -43,12 +43,14 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
 * Jira Software (Cloud)
 * Jira Software (Server)
 * [Script Runner for Jira](https://marketplace.atlassian.com/apps/6820/scriptrunner-for-jira)
-* [Jira Workflow Toolbox](https://marketplace.atlassian.com/apps/29496/jira-workflow-toolbox)
+* [Jira Workflow Toolbox - JWT](https://marketplace.atlassian.com/apps/29496/jira-workflow-toolbox)
 * [Jira Cloud Platform](https://developer.atlassian.com/cloud/jira/platform/getting-started/)
 * [Jira Atlassian Connect](https://developer.atlassian.com/cloud/jira/platform/integrating-with-jira-cloud/)
 * NodeJs
 * [Atlassian Plugin SDK](https://developer.atlassian.com/server/framework/atlassian-sdk/tutorials-and-guides/)
 * Java JDK 1.8
+* Eclipse
+* [WebServices - SOA](https://www.devmedia.com.br/web-services/2873) - [Apache Axis](https://axis.apache.org/axis/)
 
 ## 4. Project
 
