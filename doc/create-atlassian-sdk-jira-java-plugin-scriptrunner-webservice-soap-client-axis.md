@@ -2,7 +2,7 @@
 
 ---
 
-* Indice
+* Índice
   * [1. Configure o ambiente de desenvolvimento: Atlassian SDK, ScriptRunner, Eclipse e Maven/Atlassian SDK](#1-configure-o-ambiente-de-desenvolvimento-atlassian-sdk-scriptrunner-eclipse-e-mavenatlassian-sdk)
   * [2. Criar o projeto do Jira plugin com o Atlassian SDK](#2-criar-o-projeto-do-jira-plugin-com-o-atlassian-sdk)
   * [3. Configurar arquivo pom.xml do projeto criado para integrar com ScriptRunner](#3-configurar-arquivo-pomxml-do-projeto-criado-para-integrar-com-scriptrunner)
@@ -98,7 +98,7 @@ C:\..\java-plugin-scriptrunner-webservice-soap-client-axis> atlas-clean
 C:\..\java-plugin-scriptrunner-webservice-soap-client-axis> atlas-package
 ```
 
-4.3. Conferir o pacote gerado](setup-scriptrunner-dev-environment-for-eclipse-step-by-step.md#6-conferir-o-pacote-gerado)
+4.3. Conferir o pacote gerado
 
 ```cmd
 C:\..\java-plugin-scriptrunner-webservice-soap-client-axis> dir .\target\java-plugin-scriptrunner-webservice-soap-client-axis*
@@ -276,7 +276,7 @@ C:\..\java-plugin-scriptrunner-webservice-soap-client-axis> atlas-clean
 C:\..\java-plugin-scriptrunner-webservice-soap-client-axis> atlas-package
 ```
 
-8.3. Conferir o pacote gerado](setup-scriptrunner-dev-environment-for-eclipse-step-by-step.md#6-conferir-o-pacote-gerado)
+8.3. Conferir o pacote gerado
 
 ```cmd
 C:\..\java-plugin-scriptrunner-webservice-soap-client-axis> dir .\target\java-plugin-scriptrunner-webservice-soap-client-axis*
@@ -293,21 +293,33 @@ C:\..\java-plugin-scriptrunner-webservice-soap-client-axis> dir .\target\java-pl
 ### 9. Instalar o pacote (.obr) do Plugin no Jira
 
 9.1. Faça o login no Jira com credenciais de administrador
+
 9.2. Navegue para a opção do menu principal superior do Jira `Configurações >> Jira Administration >> Manage apps`
+
 9.3. Na página de `Administration` clique na aba de menu superior `Manage Apps`, em seguida no botão lateral esquerdo `Manage App` e em seguida link `Upload app`
+
 9.4. Na caixa de diálogo `Upload app` clique no botão `Choose file` e informe a localização do arquivo (.obr) com o binário de seu plugin `C:\..\java-plugin-scriptrunner-webservice-soap-client-axis\target\java-plugin-scriptrunner-webservice-soap-client-axis-2020.06.20.1913.obr` e em seguida clique no botão `Upload`
+
 9.5. Aguarde a instalação do Plugin pelo Jira
+
 9.6. Clique no botão `Close` na caixa de diálogo da mensagem `Installed and ready to go!`
+
 9.7. Clique no link para expandir a visualização do plugin e observe os atributos: `Version` e `App Key`
+
 
 
 ### 10. Execute o plugin no Console do ScriptRunner
 
 10.1. Faça o login no Jira com credenciais de administrador
+
 10.2. Navegue para a opção do menu principal superior do Jira `Configurações >> Jira Administration >> Manage apps`
+
 10.3. Na página de `Administration` clique na aba de menu superior `Script Runner >> Console`
+
 10.4. Na página de `Script Console` localize o campo `Enter the script to Execute` e o botão `Run`. Nos próximos passos você deverá colocar trechos de scripts no campo do script e clicar no botão `Run` para executar os scripts. Como resultado irá aparecer uma região de resultados identificada por `Result`, uma região de `Logs` onde são registrados os debug's da aplicação e uma região de métricas de execução `Timing`
+
 10.5. Na página de Script Console entre com o seguinte script para executar
+
 * Lembre-se dos atributos registrados de seu plugin e `Configuração >> Jira Administration >> Manage Apps`
   * `Versão`: `2020.06.20.2220`
   * `App Key`: `br.com.josemarsilva.jira.java-plugin-scriptrunner-webservice-soap-client-axis`
