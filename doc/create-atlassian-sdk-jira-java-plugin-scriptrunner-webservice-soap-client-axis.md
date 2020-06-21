@@ -335,3 +335,4 @@ log.info("hashMap: " + hashMap);
 * [Create a simple web service client with WSDL in Eclipse](https://www.youtube.com/watch?v=11iGyrvBhzc)
 * [Youtube - Integrando WebService SOAP - Consulta CEP Correios](https://www.youtube.com/watch?v=FqDenKN5y1s)
 * [https://stackoverflow.com/questions/9460864/common-logging-jar-conflict-with-apache-axis-soap-client]
+* [https://stackoverflow.com/questions/11727768/apache-axis-logging-classcastexception-while-using-it-inside-a-jira-plugin]
