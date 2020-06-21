@@ -121,13 +121,6 @@
             <version>1.4</version>
         </dependency>
 
-		<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
-		<dependency>
-		    <groupId>commons-logging</groupId>
-		    <artifactId>commons-logging</artifactId>
-		    <version>1.2</version>
-		</dependency>
-
     </dependencies>
 
     <build>
@@ -177,8 +170,6 @@
                             com.sun.net.ssl.*;resolution:="optional", 
                             javax.jms.*;resolution:="optional", 
                             org.exolab.castor.xml.*;resolution:="optional", 
-                            org.apache.log.*;resolution:="optional", 
-                            org.apache.avalon.framework.logger.*;resolution:="optional", 
                             *
                         </Import-Package>
 
