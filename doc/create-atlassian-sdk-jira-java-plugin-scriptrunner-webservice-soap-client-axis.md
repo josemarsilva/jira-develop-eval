@@ -73,12 +73,12 @@ C:\> notepad C:\..\jira-develop-eval\pom.xml
         :
     <dependencies>
         :
-        <properties>
-                :
-            <groovy.version>2.2.1</groovy.version>
-            <scriptrunner.version>4.1.3.26</scriptrunner.version>
-                :
-        </properties>
+    <properties>
+            :
+        <groovy.version>2.2.1</groovy.version>
+        <scriptrunner.version>4.1.3.26</scriptrunner.version>
+            :
+    </properties>
         :
 ```
 
@@ -88,6 +88,7 @@ C:\> notepad C:\..\jira-develop-eval\pom.xml
 4.1. Executar o Maven/Atlassian-SDK CLEAN do projeto
 
 ```cmd
+C:\..\jira-develop-eval> cd java-plugin-scriptrunner-webservice-soap-client-axis
 C:\..\java-plugin-scriptrunner-webservice-soap-client-axis> atlas-clean
 ```
 
@@ -116,10 +117,15 @@ C:\..\java-plugin-scriptrunner-webservice-soap-client-axis> dir .\target\java-pl
 ### 4. Importar o projeto Atlassian-SDK no Eclipse
 
 4.1. No Eclipse, navegar para opção de menu: `Eclipse :: File >> Import ...`
+
 4.2. Na caixa de diálogo `Import`, escolher o seguinte item da lista de opções hierárquica `Maven >> Existing Maven Project`
+
 4.3. Na caixa de diálogo `Import Maven Projects`, informar no campo `Root Directory` o caminho do projeto `C:\..\java-jira-plugin-helloworld\java-plugin-scriptrunner-webservice-soap-client-axis`. Em seguida marcar a seleção do `pom.xml` e clicar no botão `Finish`
+
 4.4. Aguardar a importação do projeto no Eclipse
+
 4.5. Pode ignorar eventuais erros com a mensagem `Setup Maven Plugins Connector` e `Resolv Later`
+
 4.6. Pode ignorar eventuais erros no arquivo `pom.xml` na tag `<plugin>` e `<execution>`
 
 ### 5. Usar o Eclipse para gerar as classes do WebService SOAP de acesso a consulta de CEP dos Correios
