@@ -29,6 +29,7 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
 	* [Groovy script debug with Apache Log4J](#4114-groovy-script-debug-with-apache-log4j)
 	* [Modify User Custom Plugin using Atlassian SDK with multiples methods](#4115-modify-user-custom-plugin-using-atlassian-sdk-with-multiples-methods)
 	* [Create Atlassian SDK Jira Java Plugin ScriptRunner WebService Soap Client Axis](#4116-create-atlassian-sdk-jira-java-plugin-scriptrunner-webservice-soap-client-axis)
+	* [Create Atlassian SDK Jira Java Plugin ScriptRunner WebService Soap Client Axis Service Manager](#4117-create-atlassian-sdk-jira-java-plugin-scriptrunner-webservice-soap-client-axis-service-manager)
   * [Guide for Configuration](#43-Guide-for-Configuration)
   * [Guide for Test](#44-Guide-for-Test)
   * [Guide for Demonstration](#45-Guide-for-Demonstration)
@@ -51,6 +52,7 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
 * Java JDK 1.8
 * Eclipse
 * [WebServices - SOA](https://www.devmedia.com.br/web-services/2873) - [Apache Axis](https://axis.apache.org/axis/)
+* [Microfocus Service Manager - (antigo HP)](https://www.microfocus.com/en-us/products/servicemanager/overview)
 
 ## 4. Project
 
@@ -273,6 +275,18 @@ creatorId: JIRAUSER10000 | creator: admin(JIRAUSER10000)
   * Plugin integrado com Axis2 SOAP WebServices
 
 * *Step-by-step*: [Create Atlassian SDK Jira Java Plugin ScriptRunner WebService Soap Client Axis](./doc/create-atlassian-sdk-jira-java-plugin-scriptrunner-webservice-soap-client-axis.md)
+
+
+#### 4.1.17. Create Atlassian SDK Jira Java Plugin ScriptRunner WebService Soap Client Axis Service Manager
+
+* *Overview*: Create Atlassian SDK Jira Java Plugin ScriptRunner WebService Soap Client Axis Service Manager
+* *Features*: 
+  * Criar plugin usando Atlassian SDK
+  * Plugin integrado com ScriptRunner
+  * Plugin integrado com Axis2 SOAP WebServices
+  * Service Manager integration WebServices
+
+* *Step-by-step*: [Create Atlassian SDK Jira Java Plugin ScriptRunner WebService Soap Client Axis Service Manager](./doc/create-atlassian-sdk-jira-java-plugin-scriptrunner-webservice-soap-client-axis-service-manager.md)
 
 
 ### 4.3. Guide for Configuration
