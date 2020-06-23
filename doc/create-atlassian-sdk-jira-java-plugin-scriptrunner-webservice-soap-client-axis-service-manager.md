@@ -192,10 +192,10 @@ C:\..\service-manager-plugin> dir .\target\service-manager-plugin-*
 ### 5. Usar o Eclipse para gerar as classes do WebService SOAP de acesso a consulta a RDM do Service Manager
 
 5.1. Primeiramente o End-Point do WSDL do serviço SOAP de homologação da ferramenta Service Manager do Bradesco:
-* URL PROD: [http://192.168.84.23:13095/sc62server/PWS/RequestForChangePadrao.wsdl]
+* URL PROD: [url-wsdl-prod](http://192.168.84.23:13095/sc62server/PWS/RequestForChangePadrao.wsdl)
   * username: `**********`
   * password: `**********`
-* URL HML: [http://192.168.248.59:13095/sc62server/PWS/RequestForChangePadrao.wsdl]
+* URL HML: [url-wsdl-hml](http://192.168.248.59:13095/sc62server/PWS/RequestForChangePadrao.wsdl)
   * username: `**********`
   * password: `**********`
 
@@ -507,7 +507,7 @@ log.info("hashMap5: " + hashMap5);
    * [Create a simple web service client with WSDL in Eclipse](https://www.youtube.com/watch?v=11iGyrvBhzc)
 
 * Troubleshooting
-  * [https://stackoverflow.com/questions/9460864/common-logging-jar-conflict-with-apache-axis-soap-client]
-  * [https://stackoverflow.com/questions/11727768/apache-axis-logging-classcastexception-while-using-it-inside-a-jira-plugin]
-  * [https://stackoverflow.com/questions/52146553/addlinkentry-class-is-a-raw-type-references-to-generic-type-addlinkentry-class]
-  * [https://stackoverflow.com/questions/46148381/caused-by-java-lang-noclassdeffounderror-org-osgi-framework-bundleactivator-w]
+  * https://stackoverflow.com/questions/9460864/common-logging-jar-conflict-with-apache-axis-soap-client
+  * https://stackoverflow.com/questions/11727768/apache-axis-logging-classcastexception-while-using-it-inside-a-jira-plugin
+  * https://stackoverflow.com/questions/52146553/addlinkentry-class-is-a-raw-type-references-to-generic-type-addlinkentry-class
+  * https://stackoverflow.com/questions/46148381/caused-by-java-lang-noclassdeffounderror-org-osgi-framework-bundleactivator-w
