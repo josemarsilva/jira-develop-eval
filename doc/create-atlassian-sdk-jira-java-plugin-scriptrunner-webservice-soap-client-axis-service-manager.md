@@ -511,3 +511,4 @@ log.info("hashMap5: " + hashMap5);
   * https://stackoverflow.com/questions/11727768/apache-axis-logging-classcastexception-while-using-it-inside-a-jira-plugin
   * https://stackoverflow.com/questions/52146553/addlinkentry-class-is-a-raw-type-references-to-generic-type-addlinkentry-class
   * https://stackoverflow.com/questions/46148381/caused-by-java-lang-noclassdeffounderror-org-osgi-framework-bundleactivator-w
+  * [`@WithPlugin( ... )` unable to resolve class groovy jira](https://community.atlassian.com/t5/Jira-Questions/Scriptrunner-quot-Unable-to-resolve-class-quot-despite/qaq-p/598803)
