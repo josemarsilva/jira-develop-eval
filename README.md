@@ -52,7 +52,7 @@ Project **jira-develop-eval** is an evaluation of Jira Software as development p
 * Java JDK 1.8
 * Eclipse
 * [WebServices - SOA](https://www.devmedia.com.br/web-services/2873) - [Apache Axis](https://axis.apache.org/axis/)
-* [Microfocus Service Manager - (antigo HP)](https://www.microfocus.com/en-us/products/servicemanager/overview)
+* [Microfocus Service Manager - (antigo HP Service Manager)](https://www.microfocus.com/en-us/products/servicemanager/overview)
 
 ## 4. Project
 
@@ -287,6 +287,18 @@ creatorId: JIRAUSER10000 | creator: admin(JIRAUSER10000)
   * Service Manager integration WebServices
 
 * *Step-by-step*: [Create Atlassian SDK Jira Java Plugin ScriptRunner WebService Soap Client Axis Service Manager](./doc/create-atlassian-sdk-jira-java-plugin-scriptrunner-webservice-soap-client-axis-service-manager.md)
+
+
+#### 4.1.18. Groovy Script in Workflow Transitions Conditions Validators Post Functions
+
+* *Overview*: Groovy Script in Workflow Transitions Conditions Validators Post Functions
+* *Features*: 
+  * Configurar Jira Workflow Transitions
+  * Groovy Script Runner in Transitions Conditions
+  * Groovy Script Runner in Transitions Validators
+  * Groovy Script Runner in Transitions Post Functions
+
+* *Step-by-step*: [Groovy Script in Workflow Transitions Conditions Validators Post Functions](./doc/example-groovy-script-in-workflow-transitions-conditions-validators-postfunctions.md)
 
 
 ### 4.3. Guide for Configuration
