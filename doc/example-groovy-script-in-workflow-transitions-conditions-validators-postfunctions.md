@@ -187,14 +187,51 @@ issue.setCustomFieldValue(customField2, hashMap.end )
 * Script:
 
 ```groovy
+// workflow-transition-ValidateCEP-validator.groovy
+
+// Import commons libraries
 import com.opensymphony.workflow.InvalidInputException
+import com.atlassian.jira.component.ComponentAccessor
+import com.atlassian.jira.issue.Issue
+import com.onresolve.scriptrunner.runner.customisers.PluginModule
+import com.onresolve.scriptrunner.runner.customisers.WithPlugin
 
-if (1==1) {
-throw new InvalidInputException("josemar-text-1",
-"josemar-text-2")
+// Import log libraries
+import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger
+import org.apache.log4j.Level
+log.setLevel(Level.DEBUG)
+
+// Instance Issue Manager, Component Accessor, Custom Fields, etc
+log.info("Instance Issue Manager, Component Accessor, Custom Fields, etc");
+def issueManager = ComponentAccessor.getIssueManager()
+def customFieldManager = ComponentAccessor.getCustomFieldManager()
+def customField1 = customFieldManager.getCustomFieldObjectByName("Custom Field 1")
+def customField2 = customFieldManager.getCustomFieldObjectByName("Custom Field 2")
+def customFieldValue1 = issue.getCustomFieldValue(customField1) as String
+def customFieldValue2 = issue.getCustomFieldValue(customField2) as String
+
+// Specify that classes from this plugin should be available to this script
+log.info("@WithPlugin('br.com.josemarsilva.jira.java-plugin-scriptrunner-webservice-soap-client-axis')");
+@WithPlugin("br.com.josemarsilva.jira.java-plugin-scriptrunner-webservice-soap-client-axis")
+import br.com.josemarsilva.jira.plugin_scriptrunner_webservice_soap_client_axis.api.MyPluginComponent
+
+// Inject plugin module
+log.info("@PluginModule");
+@PluginModule
+MyPluginComponent myPluginComponent
+
+// Invoke method getHashMap() from component
+log.info("myPluginComponent.consultaCep( " + customFieldValue1 + " )");
+def hashMap = myPluginComponent.consultaCep(customFieldValue1)
+log.info("hashMap: " + hashMap);
+log.info("customFieldValue2: " + customFieldValue2)
+
+// Check validator
+if (!customFieldValue2 || !hashMap || customFieldValue2 != hashMap.end) {
+	def ERROR_MESSAGE_RDM_INVALID = new String("ERRO: Endereço '" + customFieldValue2 + "' informado para o cep '" + customFieldValue1 + "' não confere com o endereço '" + hashMap.end + "' recuperado do site dos Correios" )
+	throw new InvalidInputException(ERROR_MESSAGE_RDM_INVALID)
 }
-
-return true
 ```
 
 ---
