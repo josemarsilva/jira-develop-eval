@@ -19,29 +19,11 @@
 
 #### 1.2. Custom Fields
 
-{| class="wikitable"
-|+ Custom Fields
-|-
-! Name
-! Type
-! Screens
-|-
-| Custom Field 1
-| Text Field (single line)
-| DEMO: Process Management Create Issue Screen, DEMO: Process Management Edit/View Issue Screen, DEMO: Process Management Resolve Issue Screen, DEMO: Simple Issue Tracking Comment Screen
-|-
-| Custom Field 2
-| Text Field (single line)
-| DEMO: Process Management Create Issue Screen, DEMO: Process Management Edit/View Issue Screen, DEMO: Process Management Resolve Issue Screen, DEMO: Simple Issue Tracking Comment Screen
-|-
-| Custom Field 3
-| Text Field (single line)
-| DEMO: Process Management Create Issue Screen, DEMO: Process Management Edit/View Issue Screen, DEMO: Process Management Resolve Issue Screen, DEMO: Simple Issue Tracking Comment Screen
-|-
-| Custom Field 4
-| Text Field (single line)
-| DEMO: Process Management Create Issue Screen, DEMO: Process Management Edit/View Issue Screen, DEMO: Process Management Resolve Issue Screen, DEMO: Simple Issue Tracking Comment Screen
-|}
+Name             | Type                     | Obs
+-----------------|--------------------------|---------------------------------
+`Custom Field 1` | Text Field (single line) | CEP - Numérico - 8 posições
+`Custom Field 2` | Text Field (single line) | Endereço - String[]
+
 
 ---
 
