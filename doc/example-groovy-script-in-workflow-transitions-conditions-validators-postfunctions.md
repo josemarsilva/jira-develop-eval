@@ -17,6 +17,34 @@
 
 ![workflow-transtions-diagram-01.png](./workflow-transtions-diagram-01.png)
 
+#### 1.2. Custom Fields
+
+{| class="wikitable"
+|+ Custom Fields
+|-
+! Name
+! Type
+! Screens
+|-
+| Custom Field 1
+| Text Field (single line)
+| DEMO: Process Management Create Issue Screen, DEMO: Process Management Edit/View Issue Screen, DEMO: Process Management Resolve Issue Screen, DEMO: Simple Issue Tracking Comment Screen
+|-
+| Custom Field 2
+| Text Field (single line)
+| DEMO: Process Management Create Issue Screen, DEMO: Process Management Edit/View Issue Screen, DEMO: Process Management Resolve Issue Screen, DEMO: Simple Issue Tracking Comment Screen
+|-
+| Custom Field 3
+| Text Field (single line)
+| DEMO: Process Management Create Issue Screen, DEMO: Process Management Edit/View Issue Screen, DEMO: Process Management Resolve Issue Screen, DEMO: Simple Issue Tracking Comment Screen
+|-
+| Custom Field 4
+| Text Field (single line)
+| DEMO: Process Management Create Issue Screen, DEMO: Process Management Edit/View Issue Screen, DEMO: Process Management Resolve Issue Screen, DEMO: Simple Issue Tracking Comment Screen
+|}
+
+---
+
 ### 2. Groovy Script Workflow Transitions Condition - Custom Field 1 deve estar preenchido com um CEP numérico de 8 posições numéricas
 
 #### 2.1. Navegue até a configuração do Script Groovy
@@ -34,7 +62,7 @@
 2.6. Na página `Adminsration >> Add Condition To Transition` escolha a opção clicando no botão `Script Condition [ScriptRunner]` e em seguida no botão `Add`
 
 2.7. Na página `Adminsration >> Add Parameters To Condition` 
-* Escolha a opção `Custom Script Condition`
+* Escolha a opção `Custom script condition`
   * Faça a atribuição à variável __boolean__ `passesCondition` para prevenir a tranisção
 
 #### 2.2. Construa o Script Groovy com o comportamento desejado
@@ -70,6 +98,9 @@ if (customFieldValue1.length() == 8 ) {
 }
 ```
 
+
+---
+
 ### 3. Groovy Script Workflow Transitions Post Function - Custom Field 2 é preenchido automaticamente com o nome do logradouro correspondente ao CEP Custom Field 1
 
 #### 3.1. Navegue até a configuração do Script Groovy
@@ -87,7 +118,7 @@ if (customFieldValue1.length() == 8 ) {
 3.6. Na página `Adminsration >> Add Post Function To Transition` escolha a opção clicando no botão `Script Post-Function [ScriptRunner]` e em seguida no botão `Add`
 
 3.7. Na página `Adminsration >> Add Parameters To Function` 
-* Escolha a opção `Custom Script post-function`
+* Escolha a opção `Custom script post-function`
 
 #### 3.2. Construa o Script Groovy com o comportamento desejado
 
@@ -142,12 +173,55 @@ issue.setCustomFieldValue(customField2, hashMap.end )
 ```
 
 
+---
+
+### 4. Groovy Script Workflow Transitions Validators - Custom Field 2 com acesso ao WebService que recupera o nome do logradouro correspondente ao CEP de Custom Field 1
+
+#### 4.1. Navegue até a configuração do Script Groovy
+
+4.1. Navegue para a opção do menu principal superior do Jira `Configurações >> Jira Administration >> Issues`
+
+4.2. Na página de `Administration` clique na aba de menu superior `Issues`, em seguida no menu lateral esquerdo `Workflow` e em seguida link `Actions :: Edit` na linha correspondente à configuração do workflow desejado
+
+4.3. Na página `Adminsration >> Issues >> Workflows` clique no botão `Diagram` e no checkbox `Show transition labels` para visualizar o __Workflow Statuses Chart Transition Diagram__
+
+4.4. Na página `Adminsration >> Issues >> Workflows` com o diagrama visível, clique na linha da transição `Approve` para acionar o menu suspenso de **Edição da transição**, em seguida clique no link `Validators` para acessar a página de edição
+
+4.5. Na página `Adminsration >> Issues >> Workflows >> [nome-do-workflow] (Draft)` clique no link `Validators` e em seguida no botão `Add validator`
+
+4.6. Na página `Adminsration >> Add Validator To Transition` escolha a opção clicando no botão `Script Validator [ScriptRunner]` e em seguida no botão `Add`
+
+4.7. Na página `Adminsration >> Add Parameters To Validator` 
+* Escolha a opção `Custom script Validator`
+
+#### 4.2. Construa o Script Groovy com o comportamento desejado
+
+* **Objetivo**: Conferir se o conteúdo do campo `Custom Field 2` é o mesmo conteúdo da execução do [script customizado de chamada ao WebService dos Correios através do Axis](create-atlassian-sdk-jira-java-plugin-scriptrunner-webservice-soap-client-axis.md#10-execute-o-plugin-no-console-do-scriptrunner)
+* **Como fazer**: 
+  * Editar o campo `Script` com o código desejado
+  * Clicar no botão `Update` para salvar o conteúdo de seu script
+  * Clicar no botão `Publicar` para publicar a nova versão de seu workflow
+
+* Script:
+
+```groovy
+import com.opensymphony.workflow.InvalidInputException
+
+if (1==1) {
+throw new InvalidInputException("josemar-text-1",
+"josemar-text-2")
+}
+
+return true
+```
+
+---
 
 ### Referencias
 
 * Tutorial
   * [Script Runner - Script Conditions Tutorial](https://scriptrunner.adaptavist.com/latest/jira/tutorials/scripted-conditions-tutorial.html)
-  * [Script Runner - Script Validators Tutorial](https://scriptrunner.adaptavist.com/latest/jira/tutorials/scripted-validators-tutorial.html)
   * [Script Runner - Script Post Functions Tutorial](https://scriptrunner.adaptavist.com/latest/jira/tutorials/scripted-post-functions-tutorial.html)
+  * [Script Runner - Script Validators Tutorial](https://scriptrunner.adaptavist.com/latest/jira/tutorials/scripted-validators-tutorial.html)
 
 * Troubleshooting
